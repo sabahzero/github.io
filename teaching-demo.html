@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
     <style>
         /* ---------- CSS CUSTOM PROPERTIES ---------- */
         :root {
@@ -384,31 +387,21 @@
             height: 100%;
         }
 
-        .video-placeholder {
-            background: var(--bg-secondary);
-            border-radius: var(--radius-sm);
-            padding: 40px 20px;
-            text-align: center;
-            border: 2px dashed var(--border-subtle);
-            margin: 1.5rem 0;
-            transition: background 0.4s ease, border-color 0.4s ease;
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0.5rem 0 1rem 0;
         }
-        .video-placeholder .icon {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 12px;
-        }
-        .video-placeholder p {
-            color: var(--text-muted);
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        .video-placeholder code {
-            background: var(--bg-primary);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85rem;
+        .badge-list .badge {
+            background: rgba(79, 156, 247, 0.08);
+            border: 1px solid rgba(79, 156, 247, 0.12);
+            border-radius: 30px;
+            padding: 4px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
             color: var(--accent);
+            letter-spacing: 0.3px;
         }
 
         .back-link {
@@ -429,23 +422,6 @@
             color: #7bb3ff;
             transform: translateX(-4px);
             background: rgba(79, 156, 247, 0.12);
-        }
-
-        .badge-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 0.5rem 0 1rem 0;
-        }
-        .badge-list .badge {
-            background: rgba(79, 156, 247, 0.08);
-            border: 1px solid rgba(79, 156, 247, 0.12);
-            border-radius: 30px;
-            padding: 4px 14px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent);
-            letter-spacing: 0.3px;
         }
 
         /* ---------- FOOTER ---------- */
@@ -592,6 +568,7 @@
     <main class="main-content">
 
         <div class="section-header">
+            <h2>3–5 Minute Teaching Video</h2>
             <p>Demonstrating TESOL-aligned teaching practices</p>
         </div>
 
@@ -610,27 +587,20 @@
 
             <h2>Teaching Video</h2>
 
-            <!-- REPLACE THIS SECTION WITH YOUR YOUTUBE VIDEO -->
-            <!--
+            <!-- Embed YouTube Video -->
             <div class="video-container">
                 <iframe
-                    src="https://www.youtube.com/watch?v=0PWPO--Akv0"
+                    src="https://www.youtube.com/embed/0PWPO--Akv0?rel=0&enablejsapi=1"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
             </div>
-            -->
-
-            <!-- PLACEHOLDER: Replace with actual video -->
-            <div class="video-placeholder">
-                <span class="icon">🎬</span>
-                <p><strong>Video placeholder</strong></p>
-                <p>Replace this section with your YouTube embed by uncommenting the video-container div above and replacing <code>YOUR_VIDEO_ID</code> with your actual YouTube video ID.</p>
-            </div>
 
             <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.5rem;">
-                <em>To add your video:</em> Upload to YouTube (unlisted), then replace <code>YOUR_VIDEO_ID</code> in the iframe <code>src</code> attribute.
+                <em>This teaching demo showcases evidence-based TESOL practices including clear objectives, scaffolding, comprehensible input, student interaction, positive reinforcement, and integration of skills.</em>
             </p>
+
+            <a href="/" class="back-link">← Back to Home</a>
 
         </div>
 
