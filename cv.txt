@@ -565,7 +565,6 @@
     <main class="main-content">
 
         <div class="section-header">
-            <h2>Sabah Ul-Hasan, Ph.D.</h2>
         </div>
 
         <div class="cv-container">
@@ -639,8 +638,6 @@
                 <li><strong>Spanish</strong> — Advanced</li>
                 <li><strong>French/Portuguese/Diné</strong> — Elementary</li>
             </ul>
-
-            <a href="/" class="back-link">← Back to Home</a>
 
         </div>
 
