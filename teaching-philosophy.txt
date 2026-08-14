@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabah Ul-Hasan, Ph.D. — Teaching Philosophy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bg-primary: #f6f9fc;
+            --bg-secondary: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.72);
+            --bg-card-hover: rgba(255, 255, 255, 0.92);
+            --bg-nav: rgba(26, 26, 46, 0.92);
+            --bg-hero-start: #0b1a33;
+            --bg-hero-end: #1a2a4a;
+            --text-primary: #0b1a33;
+            --text-secondary: #2d3a5a;
+            --text-muted: #6b7a9a;
+            --text-light: #f0f4fc;
+            --accent: #4f9cf7;
+            --accent-glow: rgba(79, 156, 247, 0.25);
+            --border-subtle: rgba(0, 0, 0, 0.06);
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.12);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0d1424;
+            --bg-secondary: #161f35;
+            --bg-card: rgba(22, 31, 53, 0.78);
+            --bg-card-hover: rgba(30, 44, 72, 0.92);
+            --bg-nav: rgba(13, 20, 36, 0.95);
+            --bg-hero-start: #070e1a;
+            --bg-hero-end: #0f1f3a;
+            --text-primary: #eef3fc;
+            --text-secondary: #c8d6e8;
+            --text-muted: #8a9bb8;
+            --text-light: #eef3fc;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.25);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.35);
+            --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.45);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.4s ease, color 0.4s ease;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 8px;
+        }
+
+        /* ---------- NAVIGATION ---------- */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-nav);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #fff;
+            letter-spacing: -0.3px;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.2px;
+        }
+        .nav-links a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.10);
+        }
+        .nav-links a.active {
+            color: #fff;
+            background: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            border-radius: 40px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #fff;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-left: 4px;
+            flex-shrink: 0;
+        }
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: rotate(12deg);
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            position: relative;
+            background: linear-gradient(145deg, var(--bg-hero-start), var(--bg-hero-end));
+            padding: 70px 24px 60px;
+            text-align: center;
+            overflow: hidden;
+            isolation: isolate;
+            transition: background 0.5s ease;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 156, 247, 0.12), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 156, 247, 0.08), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 .highlight {
+            color: var(--accent);
+            background: linear-gradient(135deg, #4f9cf7, #7bb3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 4px;
+            margin: 16px auto 18px;
+            opacity: 0.6;
+        }
+
+        .float-shape {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.30;
+        }
+        .float-shape-1 {
+            width: 120px;
+            height: 120px;
+            top: 10%;
+            left: 5%;
+            background: radial-gradient(circle, rgba(79, 156, 247, 0.20), transparent 70%);
+            animation: float 12s ease-in-out infinite alternate;
+        }
+        .float-shape-2 {
+            width: 80px;
+            height: 80px;
+            bottom: 15%;
+            right: 8%;
+            background: radial-gradient(circle, rgba(79, 156, 247, 0.15), transparent 70%);
+            animation: float 16s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(20px, -30px) scale(1.1);
+            }
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        .main-content {
+            flex: 1;
+            max-width: 1100px;
+            margin: -30px auto 50px;
+            padding: 0 24px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-top: 40px;
+        }
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+        }
+
+        .philosophy-container {
+            background: var(--bg-card);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-subtle);
+            transition: all var(--transition);
+        }
+        .philosophy-container:hover {
+            box-shadow: var(--shadow-md);
+            border-color: rgba(79, 156, 247, 0.15);
+        }
+
+        .philosophy-container h2 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+        .philosophy-container h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .philosophy-container p {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .philosophy-container ul {
+            margin: 0.4rem 0 1rem 1.6rem;
+            color: var(--text-secondary);
+        }
+
+        .philosophy-container li {
+            margin-bottom: 0.3rem;
+        }
+
+        .philosophy-container blockquote {
+            border-left: 4px solid var(--accent);
+            margin: 1rem 0 1rem 1rem;
+            padding-left: 1.2rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            background: var(--bg-secondary);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 12px 20px;
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+
+        .philosophy-container blockquote cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .philosophy-container .references {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .philosophy-container .references a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .philosophy-container .references a:hover {
+            color: #7bb3ff;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 2rem;
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 6px 16px;
+            border-radius: 40px;
+            background: rgba(79, 156, 247, 0.06);
+            border: 1px solid rgba(79, 156, 247, 0.10);
+        }
+        .back-link:hover {
+            color: #7bb3ff;
+            transform: translateX(-4px);
+            background: rgba(79, 156, 247, 0.12);
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            background: var(--bg-nav);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-subtle);
+            transition: background 0.4s ease, border-color 0.4s ease;
+            margin-top: auto;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+        }
+        .footer a {
+            color: var(--accent);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #7bb3ff;
+        }
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+        .footer-social a {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-flex;
+        }
+        .footer-social a:hover {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 8px;
+                padding: 10px 16px;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 5px 12px;
+            }
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .hero .subtitle {
+                font-size: 0.95rem;
+            }
+            .hero {
+                padding: 50px 16px 40px;
+            }
+            .philosophy-container {
+                padding: 28px 20px;
+            }
+            .philosophy-container h2 {
+                font-size: 1.3rem;
+            }
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding-top: 30px;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .nav-links a {
+                font-size: 0.75rem;
+                padding: 4px 10px;
+            }
+            .logo {
+                font-size: 1.1rem;
+            }
+            .philosophy-container {
+                padding: 20px 16px;
+            }
+            .section-header {
+                padding-top: 20px;
+            }
+            .philosophy-container blockquote {
+                margin-left: 0.5rem;
+                padding-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">Sabah<span>Ul-Hasan</span></div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/lesson-plan.html">Lesson Plan</a>
+                    <a href="/teaching-demo.html">Demo</a>
+                    <a href="/cv.html">CV</a>
+                    <a href="/teaching-philosophy.html" class="active">Philosophy</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <header class="hero" role="banner">
+        <div class="float-shape float-shape-1"></div>
+        <div class="float-shape float-shape-2"></div>
+        <div class="hero-content">
+            <h1>Teaching <span class="highlight">Philosophy</span></h1>
+            <p class="subtitle">Integrating Theory, Practice, and Values</p>
+            <div class="hero-divider"></div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+
+        <div class="section-header">
+            <h2>Sabah Ul-Hasan, Ph.D.</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px;">A scientist's approach to language education</p>
+        </div>
+
+        <div class="philosophy-container">
+
+            <!-- INTRODUCTION -->
+            <h2>Introduction</h2>
+            <p>As a scientist by training and an educator by passion, I view teaching language as a dynamic process that bridges inquiry with human connection. My teaching philosophy integrates theoretical perspectives from second language acquisition, sociocultural theory, and critical pedagogy grounded in the belief that language learning is both cognitive and social. Throughout this certificate program, my understanding of effective TESOL (Teaching English to Speakers of Other Languages) practice has deepened to center on learner agency, meaningful interaction, and cultural responsiveness.</p>
+
+            <!-- MODEL OF LANGUAGE LEARNING -->
+            <h2>Model of Language Learning and Teaching</h2>
+            <p>I approach language learning as a holistic process. Drawing from Vygotsky's sociocultural theory, I believe language acquisition occurs through social interaction and collaborative meaning-making within a learner's Zone of Proximal Development. This informs my commitment to creating classrooms where students engage in authentic communication, negotiating meaning and constructing knowledge together.</p>
+            <p>My teaching practice is guided by the SIOP framework (Sheltered Instruction Observation Protocol), which I see as an empirically validated approach to making content comprehensible for English learners. I prioritize clear content and language objectives and providing multiple opportunities for interaction and application. I also embrace post-method pedagogy, recognizing that effective teaching must be context-sensitive and responsive to local particularities. I avoid rigid adherence to any single method and instead draw from task-based, content-based, and communicative approaches to meet diverse student needs.</p>
+
+            <!-- THE ROLE OF THE TEACHER -->
+            <h2>The Role of the Teacher as Moral Agent</h2>
+            <p>Central to my philosophy is the conviction that language teachers serve as moral agents. As Kubanyiova and Crookes (2016) argue, <q>there is no aspect of the engagement to which the moral is irrelevant.</q> Every pedagogical decision carries ethical weight and communicates values to students. My responsibility extends beyond instruction to fostering environments where students feel valued and capable. Mistakes are celebrated as part of learning, and cultural and linguistic identities are affirmed.</p>
+
+            <!-- ENGLISH AS A GLOBAL LANGUAGE -->
+            <h2>Teaching English as a Global Language</h2>
+            <p>My philosophy is informed by the complex reality of English as a global language, functioning simultaneously as a tool for opportunity and a vehicle for cultural imperialism. I'm committed to teaching English in ways that respect linguistic diversity and empower learners to use the language on their own terms. This means valuing multilingual repertoires and critically examining cultural content in materials. I aim to prepare students not only to communicate in English but to advocate for themselves and their communities.</p>
+
+            <!-- KNOWLEDGE, SKILLS, DISPOSITIONS -->
+            <h2>Knowledge, Skills, and Dispositions</h2>
+            <p>Through this certificate program, I've developed a strong foundation in TESOL theory and practice. I can design student-centered lessons integrating listening, speaking, reading, and writing while employing authentic assessment and scaffolding techniques to meet diverse learner needs. My growing proficiency in differentiating materials and integrating technology enables me to create accessible, engaging experiences for students at varying proficiency levels.</p>
+
+            <!-- REFLECTION AND GROWTH -->
+            <h2>Reflection and Growth</h2>
+            <p>Throughout this course, my identity as a teacher has evolved significantly. I began with a scientist's appreciation for explicit knowledge and systematic approaches. While I still value the efficiency that explicit frameworks provide, I now recognize that language learning is messy, unpredictable, and deeply personal. I've moved from seeing students as recipients of knowledge to viewing them as co-constructors of meaning. Effective teaching requires not just methodological expertise but genuine care and a willingness to learn alongside students.</p>
+
+            <!-- CONCLUSION -->
+            <h2>Conclusion</h2>
+            <p>My teaching philosophy is a living document that will continue to evolve as I gain more experience and engage with new research. At its core, it's a commitment to creating learning environments where students can grow as both language users and whole human beings. Language education has the power to transform lives, and I'm honored to play a part in that transformation.</p>
+
+            <!-- REFERENCES -->
+            <div class="references">
+                <strong>References</strong><br />
+                Kubanyiova, M., &amp; Crookes, G. (2016). Re-envisioning the roles, tasks, and contributions of language teachers in the multilingual era of language education research and practice. <em>The Modern Language Journal</em>, 100(S1), 117–132. <a href="https://doi.org/10.1111/modl.12304" target="_blank">https://doi.org/10.1111/modl.12304</a><br /><br />
+                Kumaravadivelu, B. (2006). TESOL methods: Changing tracks, challenging trends. <em>TESOL Quarterly</em>, 40(1), 59–81. <a href="https://doi.org/10.2307/40264511" target="_blank">https://doi.org/10.2307/40264511</a><br /><br />
+                Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.
+            </div>
+
+            <a href="/" class="back-link">← Back to Home</a>
+
+        </div>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <span>&copy; 2026 <a href="/">Sabah Ul-Hasan</a></span>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/sabahulhasan/" aria-label="LinkedIn">🔗</a>
+                <a href="https://github.com/sabahzero" aria-label="GitHub">🐙</a>
+                <a href="mailto:bysabahulhasan@gmail.com" aria-label="Email">✉️</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== THEME TOGGLE SCRIPT ========== -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const root = document.documentElement;
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            let currentTheme = stored || (prefersDark ? 'dark' : 'light');
+
+            function setTheme(theme) {
+                if (theme === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                    icon.textContent = '☀️';
+                } else {
+                    root.removeAttribute('data-theme');
+                    icon.textContent = '🌙';
+                }
+                currentTheme = theme;
+                localStorage.setItem('theme', theme);
+            }
+
+            setTheme(currentTheme);
+
+            toggle.addEventListener('click', () => {
+                const next = currentTheme === 'light' ? 'dark' : 'light';
+                setTheme(next);
+            });
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
