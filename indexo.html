@@ -1,0 +1,322 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Sabah Ul-Hasan, Ph.D. - Teaching Portfolio</title>\
+    <style>\
+        /* ---------- RESET & BASE ---------- */\
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+        \}\
+\
+        body \{\
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;\
+            line-height: 1.6;\
+            color: #1a1a2e;\
+            background: #f0f4f8;\
+            min-height: 100vh;\
+            display: flex;\
+            flex-direction: column;\
+        \}\
+\
+        /* ---------- NAVIGATION ---------- */\
+        nav \{\
+            background: #1a1a2e;\
+            padding: 16px 0;\
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);\
+            position: sticky;\
+            top: 0;\
+            z-index: 100;\
+        \}\
+\
+        nav .nav-container \{\
+            max-width: 1100px;\
+            margin: 0 auto;\
+            padding: 0 24px;\
+            display: flex;\
+            justify-content: space-between;\
+            align-items: center;\
+            flex-wrap: wrap;\
+        \}\
+\
+        nav .logo \{\
+            color: #ffffff;\
+            font-weight: 700;\
+            font-size: 1.2rem;\
+            letter-spacing: 0.5px;\
+        \}\
+        nav .logo span \{\
+            color: #64b5f6;\
+        \}\
+\
+        nav .nav-links \{\
+            display: flex;\
+            gap: 6px;\
+            flex-wrap: wrap;\
+        \}\
+\
+        nav a \{\
+            color: rgba(255,255,255,0.8);\
+            text-decoration: none;\
+            padding: 6px 14px;\
+            border-radius: 20px;\
+            font-size: 0.9rem;\
+            transition: all 0.3s ease;\
+        \}\
+\
+        nav a:hover \{\
+            color: #ffffff;\
+            background: rgba(255,255,255,0.12);\
+        \}\
+\
+        nav a.active \{\
+            color: #ffffff;\
+            background: #64b5f6;\
+        \}\
+\
+        /* ---------- HERO SECTION ---------- */\
+        .hero \{\
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\
+            color: #ffffff;\
+            padding: 60px 24px 50px;\
+            text-align: center;\
+            position: relative;\
+            overflow: hidden;\
+        \}\
+\
+        .hero::after \{\
+            content: '';\
+            position: absolute;\
+            bottom: -60px;\
+            right: -60px;\
+            width: 300px;\
+            height: 300px;\
+            border-radius: 50%;\
+            background: rgba(100, 181, 246, 0.08);\
+        \}\
+\
+        .hero .hero-content \{\
+            max-width: 800px;\
+            margin: 0 auto;\
+            position: relative;\
+            z-index: 1;\
+        \}\
+\
+        .hero h1 \{\
+            font-size: 2.8rem;\
+            font-weight: 700;\
+            margin-bottom: 8px;\
+            letter-spacing: -0.5px;\
+        \}\
+        .hero h1 .highlight \{\
+            color: #64b5f6;\
+        \}\
+\
+        .hero .subtitle \{\
+            font-size: 1.3rem;\
+            color: rgba(255,255,255,0.8);\
+            margin-bottom: 6px;\
+            font-weight: 300;\
+        \}\
+\
+        .hero .tagline \{\
+            font-size: 1.1rem;\
+            color: rgba(255,255,255,0.6);\
+            margin-bottom: 24px;\
+            font-weight: 300;\
+        \}\
+\
+        .hero .badge \{\
+            display: inline-block;\
+            background: rgba(100, 181, 246, 0.2);\
+            color: #64b5f6;\
+            padding: 6px 20px;\
+            border-radius: 30px;\
+            font-size: 0.85rem;\
+            font-weight: 500;\
+            border: 1px solid rgba(100, 181, 246, 0.3);\
+        \}\
+\
+        /* ---------- MAIN CONTENT ---------- */\
+        .main-content \{\
+            flex: 1;\
+            max-width: 1100px;\
+            margin: -30px auto 40px;\
+            padding: 0 24px;\
+            width: 100%;\
+            position: relative;\
+            z-index: 2;\
+        \}\
+\
+        .card-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\
+            gap: 20px;\
+        \}\
+\
+        .card \{\
+            background: #ffffff;\
+            border-radius: 16px;\
+            padding: 28px 24px;\
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);\
+            transition: all 0.3s ease;\
+            text-decoration: none;\
+            color: #1a1a2e;\
+            border: 1px solid rgba(0,0,0,0.04);\
+            text-align: center;\
+        \}\
+\
+        .card:hover \{\
+            transform: translateY(-6px);\
+            box-shadow: 0 12px 40px rgba(0,0,0,0.10);\
+            border-color: #64b5f6;\
+        \}\
+\
+        .card .icon \{\
+            font-size: 2.6rem;\
+            margin-bottom: 10px;\
+            display: block;\
+        \}\
+\
+        .card h3 \{\
+            font-size: 1.1rem;\
+            font-weight: 600;\
+            color: #1a1a2e;\
+            margin-bottom: 4px;\
+        \}\
+\
+        .card p \{\
+            font-size: 0.9rem;\
+            color: #666;\
+            margin: 0;\
+        \}\
+\
+        /* ---------- FOOTER ---------- */\
+        .footer \{\
+            background: #1a1a2e;\
+            color: rgba(255,255,255,0.5);\
+            text-align: center;\
+            padding: 24px;\
+            font-size: 0.9rem;\
+            margin-top: auto;\
+        \}\
+\
+        .footer a \{\
+            color: #64b5f6;\
+            text-decoration: none;\
+        \}\
+        .footer a:hover \{\
+            text-decoration: underline;\
+        \}\
+\
+        /* ---------- RESPONSIVE ---------- */\
+        @media (max-width: 768px) \{\
+            nav .nav-container \{\
+                flex-direction: column;\
+                gap: 12px;\
+            \}\
+\
+            nav .nav-links \{\
+                justify-content: center;\
+            \}\
+\
+            .hero h1 \{\
+                font-size: 2rem;\
+            \}\
+            .hero .subtitle \{\
+                font-size: 1.1rem;\
+            \}\
+            .hero .tagline \{\
+                font-size: 1rem;\
+            \}\
+\
+            .card-grid \{\
+                grid-template-columns: 1fr 1fr;\
+            \}\
+        \}\
+\
+        @media (max-width: 480px) \{\
+            .card-grid \{\
+                grid-template-columns: 1fr;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+    <!-- ========== NAVIGATION ========== -->\
+    <nav>\
+        <div class="nav-container">\
+            <div class="logo">Sabah<span>Ul-Hasan</span></div>\
+            <div class="nav-links">\
+                <a href="/" class="active">Home</a>\
+                <a href="/lesson-plan.html">Lesson Plan</a>\
+                <a href="/teaching-demo.html">Teaching Demo</a>\
+                <a href="/cv.html">CV</a>\
+                <a href="/teaching-philosophy.html">Philosophy</a>\
+            </div>\
+        </div>\
+    </nav>\
+\
+    <!-- ========== HERO ========== -->\
+    <section class="hero">\
+        <div class="hero-content">\
+            <h1>Sabah <span class="highlight">Ul-Hasan</span>, Ph.D.</h1>\
+            <p class="subtitle">Lead, Life Sciences AI &amp; Informatics</p>\
+            <p class="tagline">Educator \'b7 Scientist \'b7 Mentor</p>\
+            <span class="badge">\uc0\u55357 \u56538  TESOL Certificate Program</span>\
+        </div>\
+    </section>\
+\
+    <!-- ========== CARD GRID ========== -->\
+    <div class="main-content">\
+        <div class="card-grid">\
+\
+            <!-- Lesson Plan -->\
+            <a href="/lesson-plan.html" class="card">\
+                <span class="icon">\uc0\u55357 \u56541 </span>\
+                <h3>Model Lesson Plan</h3>\
+                <p>Sustainable Living Practices \'97 Intermediate ESL</p>\
+            </a>\
+\
+            <!-- Teaching Demo -->\
+            <a href="/teaching-demo.html" class="card">\
+                <span class="icon">\uc0\u55356 \u57253 </span>\
+                <h3>Teaching Demo</h3>\
+                <p>3-5 minute evidence-based practice video</p>\
+            </a>\
+\
+            <!-- CV -->\
+            <a href="/cv.html" class="card">\
+                <span class="icon">\uc0\u55357 \u56516 </span>\
+                <h3>Curriculum Vitae</h3>\
+                <p>Education, experience &amp; publications</p>\
+            </a>\
+\
+            <!-- Teaching Philosophy -->\
+            <a href="/teaching-philosophy.html" class="card">\
+                <span class="icon">\uc0\u55357 \u56534 </span>\
+                <h3>Teaching Philosophy</h3>\
+                <p>My approach to language education</p>\
+            </a>\
+\
+        </div>\
+    </div>\
+\
+    <!-- ========== FOOTER ========== -->\
+    <div class="footer">\
+        &copy; 2026 <a href="/">Sabah Ul-Hasan</a> &bull; Built with \uc0\u10084 \u65039  for the TESOL Certificate Program\
+    </div>\
+\
+</body>\
+</html>}
